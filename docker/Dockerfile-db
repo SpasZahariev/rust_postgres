@@ -1,0 +1,10 @@
+FROM postgres
+
+# Create the table on start-up
+# ADD schemas/messages.sql /docker-entrypoint-initdb.d/
+
+# Will instrecut the container to create a schema named <postgres> on the first run
+ENV POSTGRES_DB postgres 
+
+# Any files found in here will be executed
+COPY schemas/messages.sql /docker-entrypoint-initdb.d/
