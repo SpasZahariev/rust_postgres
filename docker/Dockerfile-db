@@ -1,4 +1,4 @@
-FROM postgres
+FROM postgres:15.1
 
 # Create the table on start-up
 # ADD schemas/messages.sql /docker-entrypoint-initdb.d/
